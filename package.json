@@ -1,0 +1,9 @@
+{
+  "name": "crayola",
+  "version": "0.0.1",
+  "description": "canvas with socket.io and processing.js",
+  "dependencies": {
+    "express": "~4.8.0",
+    "socket.io": "~1.0.6"
+  }
+}

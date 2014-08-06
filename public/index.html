@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sketch</title>
+    <style>
+      body, html{
+        margin: 0; padding: 0;
+      }
+      
+      #color_select{position: absolute; z-index: 10; }
+      #color_select ul li{ list-style: none; float: left; }
+      #color_select ul li span{ display: block; width: 50px; height: 50px; margin: 5px; cursor: pointer; }
+      #color_select ul li span.red{ background-color: #ff0000;}
+      #color_select ul li span.green{ background-color: #00ff00;}
+      #color_select ul li span.blue{ background-color: #0000ff;}
+      #color_select ul li span.yellow{ background-color: #00ffff;}
+      #color_select ul li span.purple{ background-color: #ffff00;}
+      #color_select ul li span.black{ color: #000000;} 
+
+      #paint{ position: absolute; z-index: 1; }
+    </style>
+  </head>
+  <body>
+    <div id="sketch">
+      <div id="color_select">
+        <ul>
+          <li><span class="color red" data-color="#ff0000"></span></li>
+          <li><span class="color green" data-color="#00ff00"></span></li>
+          <li><span class="color blue" data-color="#0000ff"></span></li>
+          <li><span class="color yellow" data-color="#00ffff"></span></li>
+          <li><span class="color purple" data-color="#ffff00"></span></li>
+          <li><span class="color black" data-color="#000000"></span></li>
+        </ul>
+      </div>
+      <canvas id="paint"></canvas>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src='/js/main.js'></script>
+  </body>
+</html>
